@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contabilidad</title>
+    <link rel="stylesheet" href="../css/contabilidad.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+            <h1>Bienvenido</h1>
+            <div class="informacion">
+                <button>
+                    <i class="fas fa-bell text-xl text-gray-600"></i>
+                    <span>3</span>
+                </button>
+                <div>
+                    <strong>Domingo</strong>
+                    <p>Jefe Económico</p>
+                </div>
+                <span>D</span>
+            </div>
+    </header>
+    <aside>
+        <div class="logo">
+            <div>
+                <img src="../img/logologo.png" alt="">
+            </div>
+            <div>
+                <h2>INSTTIC</h2>
+                <p>Modulo Económico</p>
+            </div>
+        </div>
+        <div class="identidad">
+            <div class="codigo">DI</div>
+            <div>
+                <h2>Domingo IKAKO</h2>
+                <h2>Molonga</h2>
+                <p>Jefe económico</p>
+            </div>
+        </div>
+        <nav>
+            <a href="../index.html"><i class="fas fa-tachometer-alt w-5"></i><span>Inicio</span></a>
+            <a href="#" class="activo"><i class="fas fa-file-invoice-dollar w-5"></i><span>Contabilidad</span></a>
+            <a href="./nominas.html"> <i class="fas fa-users w-5"></i><span>Nominas</span></a>
+            <a href="./cajaChica.html"><i class="fas fa-cash-register w-5"></i><span>Caja Chica</span></a>
+            <a href="./proveerdores.html"><i class="fas fa-handshake w-5"></i><span>Proveedores</span></a>
+            <a href="./informe.html"><i class="fas fa-chart-bar w-5"></i><span>Informe</span></a>
+        </nav>
+        <button class="cerrar-sesion">
+            <i class="fas fa-sign-out-alt"></i>
+            <p>Cerrar sesión</p>
+        </button>
+        
+    </aside>
+     
+    <main>
+
+        <section class="cabezera">
+
+            <article class="encabezado">
+                <div class="titulos">
+                    <div class="titulo">
+                        <i>📒</i>
+                        <h2>Contabilidad y egresos</h2>
+                    </div>
+                    <p>Registro y control de todos los egresos del INSTTIC</p>
+                </div>
+                <div class="botones">
+                    <button class="boton1">Exportar</button>
+                    <button class="boton2">+ Nuevo egreso</button>
+                </div>
+            </article>
+
+            <article class="alertas">⚠ 1 egreso sin
+                justificante adjunto. Adjunta las 
+                facturas para la correcta auditoría.
+            </article>
+
+        </section>
+
+         <section class="informes">
+
+            <article>
+                <i>📋</i>
+                <span> Total egresos</span>
+                <strong>2</strong>
+                <p>Registrados</p>
+            </article>
+            <article>
+                <i>💸</i>
+                <span>Total egresos</span>
+                <strong>1078657778</strong>
+                <p>Acumulado</p>
+            </article>
+            <article>
+                <i>📎</i>
+                <span>Sin justificante</span>
+                <strong>1</strong>
+                <p>Requieren factura</p>
+            </article>
+            <article>
+                <i>⏳</i>
+                <span>Pendientes</span>
+                <strong>0</strong>
+                <p>Esperando aprobación</p>
+            </article>   
+        </section>
+
+        <section class="registrar">
+            <form action="" method="post">
+                <article class="datos">
+                    <div>
+                        <label>Fecha *</label>
+                        <input type="datetime-local">
+                    </div>
+
+                    <div>
+                        <label>Partida presupuestaria *</label>
+                       <select>
+                            <option>Seleccionar</option>
+                            <option>Gastos del personal</option>
+                            <option>Estipendio de estudiantes</option>
+                            <option>Bienes y servicios</option>
+                            <option>Gastos financieros</option>
+                       </select>
+                    </div>
+
+                    <div>
+                        <label>Importe (FCFA) *</label>
+                        <input type="number">
+                    </div>
+
+                </article>
+                
+                <article class="descripcion">
+
+                    <div>
+                        <label>Concepto *</label>
+                        <input type="text" placeholder="Descripción detallada del gasto">
+                    </div>
+
+                    <div>
+                        <label>Beneficiario *</label>
+                        <input type="text" placeholder="Nombre del beneficiario o proveedor">
+                    </div>
+
+                </article>
+
+                <article>
+                    <select>
+                        <option>si - adjuntaré la factura</option>
+                        <option>No - pendiente de adjuntar</option>
+                    </select>
+                </article>
+
+                <article class="btns-registrar">
+                    <button  class="btn-registrar">Registrar egreso</button>
+                    <button class="btn-cancelar">Cancelar</button>
+                </article>
+
+            </form>
+        </section>
+
+        <section class="listas">
+            <article>
+                <h3>Listado de egresos</h3>
+                <div>
+
+                    <select>
+                        <option>Todos los listados</option>
+                        <option>Aprobado</option>
+                        <option>Pendiente</option>
+                        <option>Sin justificante</option>
+                    </select>
+
+                    <select>
+                        <option>Todas las partidas</option>
+                        <option>Personal</option>
+                        <option>Estudiantes</option>
+                        <option>Bienes y servicios</option>
+                        <option>Financieros</option>
+                    </select>
+
+                </div>
+            </article>
+            <table>
+                <tr>
+                    <th>holas</th>
+                    <th>holas</th>
+                    <th>holas</th>
+                    <th>holas</th>
+                    <th>holas</th>
+                    <th>holas</th>
+                    <th>holas</th>
+                    <th>holas</th>
+                </tr>
+                <tr>
+                    <td>hola</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                </tr>
+                 <tr>
+                    <td>hola</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                    <td>hpla</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+</body>
+</html>

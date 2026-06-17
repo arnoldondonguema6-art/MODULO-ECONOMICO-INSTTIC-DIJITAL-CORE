@@ -1,0 +1,369 @@
+:root{
+    --color-primario: aliceblue;
+    --color-secundario: rgb(163, 150, 133);
+    --blanco:white;
+    --verde: #1D9E75;
+    --shadow: 1px 1px 5px  rgb(0, 101, 252);
+    --shadow-green: 1px 1px 5px  #1D9E75;;
+    --no-borde:none;
+    --centro: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Aqui estaran los estilos del header*/
+header{
+    background-color:white;
+    left: 290px;
+    width: calc(100% - 290px);
+    height: 60px;
+    padding: 0px 25px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+    top: 0px;
+}
+header .informacion{
+    padding: 13px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+header .informacion button{
+    background-color: white;
+    border: none;
+    width: 37px;
+    height: 38px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header .informacion button i{
+    font-size: 25px;
+}
+header .informacion button span{
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+header .informacion button span:hover{
+    background-color: rgb(194, 39, 39);
+    transform: scale(1.2);
+}
+header .informacion button span:active{
+    background-color: rgb(236, 68, 68);
+}
+header .informacion div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+header .informacion div p{
+    color: green;
+}
+header .informacion span{
+    background-color: rgb(119, 173, 207);
+    color:blue;
+    font-weight: bold;
+    height: 40px;
+    width:40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Aquin estaran los estilos del aside*/
+
+aside{
+    background-color: white;
+    width: 290px;
+    height: 100vh;
+    padding: 10px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    gap: 20px;
+}
+.logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid blue;
+    gap: 10px;
+}
+.logo img{
+   width: 50px;
+}
+.identidad{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.identidad .codigo{
+    background-color: rgb(119, 173, 207);
+    color:blue;
+    font-weight: bold;
+    height: 40px;
+    width:40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.identidad h2{
+    font-size: 17px;
+}
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+nav a.activo{
+    background-color: rgb(123, 175, 216);
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+}
+nav a:hover{
+    background-color: rgb(123, 175, 216);
+    transform: translate(10px,0px);
+}
+nav a i{
+    color:var(--verde);
+}
+.cerrar-sesion{
+    background-color: aliceblue;
+    color: red;
+    width: 100%;
+    height: 50px;
+    margin-top: auto;
+    font-size: 18px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.cerrar-sesion:hover{
+    background-color: rgb(179, 150, 150);
+}
+.cerrar-sesion:active{
+    background-color: rgb(205, 112, 112);
+}
+
+/*Aque estaran los estilos del main*/
+
+
+main{
+    background-color:var(--color-primario);
+    min-width: 100vh;
+    margin-left: 290px;
+    padding: 20px 30px;
+    overflow: hidden;
+}
+
+/*Aqui estaran los estilos de la primera seccion*/
+
+section.informes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+section.informes article{
+    background-color: white;
+    max-width: 48%;
+    height: 130px;
+    flex-basis: 24%;
+    flex: 1;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section.informes article:hover{
+   transform: translate(0px, -10px);
+   box-shadow: var(--shadow);
+  
+}
+section.informes article>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Aqui estaran los estilos de los accecos directos a los modulos*/
+
+.titulo-acceso{
+    color: var(--color-secundario);
+    margin: 21px 0px;
+}
+
+section.acceso-modulo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+section.acceso-modulo a{
+    background-color: var(--blanco);
+    text-decoration: none;
+    max-width: 48%;
+    height: 130px;
+    padding: 20px;
+    flex-basis: 32%;
+    flex-grow: 1;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+section.acceso-modulo a:hover{
+    transform: translate(0px, -5px);
+    border: 1px solid green;
+
+}
+section.acceso-modulo a i{
+   font-style:initial;
+}
+section.acceso-modulo a span{
+   color: black;
+   font-weight: bold;
+}
+section.acceso-modulo a p{
+   color:var(--color-secundario);
+}
+
+
+/*Aqui estaran los estilos de las notificaciones recientes*/
+
+
+.notificaciones_recientes{
+    display: flex;
+    gap: 20px;
+}
+.notificaciones_recientes article{
+    min-width: 48%;
+}
+.notificaciones_recientes article .encabezado{
+    color: var(--color-secundario);
+    height:  30px;
+    display: flex;
+    justify-content: space-between;
+}
+.notificaciones_recientes article .encabezado button{
+    background-color: var(--blanco);
+    width: 70px;
+    height: 25px;
+    align-self: flex-end;
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+}
+.notificaciones_recientes .notificaciones .notificacion{
+    background-color: var(--blanco);
+    padding: 20px 15px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(190, 195, 195);
+    box-shadow: var(--shadow);
+}
+.notificaciones_recientes .notificaciones .notificacion div{
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+.notificaciones_recientes .notificaciones .notificacion div:last-child{
+    border-bottom: none;
+}
+
+/*Aqui estaran los estilos de la tabla egresos*/ 
+
+.notificaciones_recientes .egresos table{
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+    border: 1px solid rgb(183, 188, 194);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+.notificaciones_recientes .egresos tr{
+    height: 30px;
+}
+.notificaciones_recientes .egresos th, td{
+    padding: 0px 10px; 
+}
+.notificaciones_recientes .egresos th{
+   background-color:var(--color-primario);
+}
+.notificaciones_recientes .egresos td{
+   background-color:var(--blanco);
+}
+.notificaciones_recientes .egresos td:hover{
+   background-color:var(--color-primario);
+}
+.notificaciones_recientes .egresos tr:hover{
+   background-color:var(--color-primario);
+}
+
+
+
+
+
+
+@media screen and (max-width:900px){
+    header{
+        width: 100%;
+        padding: 0px 10px;
+        left: 0px;
+        justify-content: space-between;
+
+    }
+    header .informacion{
+        padding: 13px 10px 0px;
+        gap: 10px;
+
+    }
+     aside{
+        display: none;
+    }
+    main{
+        margin-left: auto;
+    }
+    .notificaciones_recientes{
+        flex-direction: column;
+}
+   
+}

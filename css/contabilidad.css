@@ -1,0 +1,434 @@
+:root{
+    --color-primario: aliceblue;
+    --color-secundario: rgb(163, 150, 133);
+    --blanco:white;
+    --verde: #1D9E75;
+    --rojo:red;
+    --shadow: 1px 1px 5px  rgb(0, 101, 252);
+    --shadow-green: 1px 1px 5px  #1D9E75;
+    --no-borde:none;
+    --centro: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Aqui estaran los estilos del header*/
+
+header{
+    background-color:white;
+    width: calc(100% - 290px);
+    height: 60px;
+    padding: 0px 25px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+    top: 0px;
+    left: 290px;
+}
+header .informacion{
+    padding: 13px 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items:var(--centro);
+    gap: 20px;
+}
+header .informacion button{
+    background-color: white;
+    border: none;
+    width: 37px;
+    height: 38px;
+    position: relative;
+    display: flex;
+    align-items: var(--centro);
+    gap: 5px;
+}
+header .informacion button i{
+    font-size: 25px;
+}
+header .informacion button span{
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: var(--centro);
+    align-items: var(--centro);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+header .informacion button span:hover{
+    background-color: rgb(194, 39, 39);
+    transform: scale(1.2);
+}
+header .informacion button span:active{
+    background-color: rgb(236, 68, 68);
+}
+header .informacion div{
+    display: flex;
+    flex-direction: column;
+    justify-content: var(--centro);
+    align-items: flex-end;
+}
+header .informacion div p{
+    color: green;
+}
+header .informacion span{
+    background-color: rgb(119, 173, 207);
+    color:blue;
+    font-weight: bold;
+    height: 40px;
+    width:40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: var(--centro);
+    align-items: var(--centro);
+}
+
+/*Aqui estaran los estilos del aside*/
+
+aside{
+    background-color: white;
+    width: 290px;
+    height: 100vh;
+    padding: 10px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: var(--centro);
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    gap: 20px;
+}
+.logo{
+    width: 100%;
+    display: flex;
+    align-items: var(--centro);
+    border-bottom: 1px solid blue;
+    gap: 10px;
+}
+.logo img{
+   width: 50px;
+}
+.identidad{
+    width: 100%;
+    display: flex;
+    align-items: var(--centro);
+    gap: 10px;
+}
+.identidad .codigo{
+    background-color: rgb(119, 173, 207);
+    color:blue;
+    font-weight: bold;
+    height: 40px;
+    width:40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content:var(--centro);
+    align-items: var(--centro);
+}
+.identidad h2{
+    font-size: 17px;
+}
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+nav a.activo{
+    background-color: rgb(123, 175, 216);
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+}
+nav a:hover{
+    background-color: rgb(123, 175, 216);
+    transform: translate(10px,0px);
+}
+nav a i{
+    color:var(--verde);
+}
+.cerrar-sesion{
+    background-color: aliceblue;
+    color: red;
+    width: 100%;
+    height: 50px;
+    margin-top: auto;
+    font-size: 18px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    justify-content: var(--centro);
+    align-items: var(--centro);
+    gap: 10px;
+}
+.cerrar-sesion:hover{
+    background-color: rgb(179, 150, 150);
+}
+.cerrar-sesion:active{
+    background-color: rgb(205, 112, 112);
+}
+
+/*Aque estaran los estilos del main*/
+
+main{
+    background-color:var(--color-primario);
+    min-height:100vh;
+    margin-left: 290px;
+    padding: 15px 30px;
+    overflow: hidden;
+}
+
+/*Aqui estaran los estilos de la cabezera*/
+section.cabezera{
+    display: flex;
+    margin-bottom: 15px;
+    flex-direction: column;
+    gap:20px;
+}
+.cabezera .encabezado{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.cabezera .encabezado p{
+   font-size: 15px;
+   opacity: 60%;
+}
+.cabezera .encabezado>div{
+    display: flex;
+    align-items: var(--centro);
+    gap: 10px;
+}
+.cabezera .encabezado .titulos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.cabezera .encabezado .titulos .titulo{
+    display: flex;
+    justify-content: left;
+    align-items: var(--centro);
+    gap: 10px;
+}
+.cabezera .encabezado .titulos .titulo i{
+   font-style: initial;
+   font-size: 20px;
+}
+.boton1,.boton2{
+    border: var(--no-borde);
+    border-radius: 8px;
+    border: 1px solid rgb(42, 40, 40);
+}
+.cabezera .encabezado div.botones .boton1{
+    background-color: var(--blanco);
+    width: 80px;
+    height: 25px;
+}
+.cabezera .encabezado div.botones .boton1:hover{
+    background-color: var(--color-primario);
+}
+.cabezera .encabezado div.botones .boton1:active{
+    background-color: var(--blanco);
+}
+.cabezera .encabezado div.botones .boton2{
+    background-color: var(--verde);
+    color: var(--blanco);
+    width: 130px;
+    height: 30px;
+}
+.cabezera .encabezado div.botones .boton2:hover{
+    background-color: rgb(39, 130, 39);
+}
+.cabezera .encabezado div.botones .boton2:active{
+    background-color: var(--verde);
+}
+.cabezera .alertas{
+    background-color: #FAEEDA;
+    width: 100%;
+    height: 40px;
+    padding: 0px 15px;
+    border-radius: 10px;
+    border: 1px solid orange;
+    display: flex;
+    align-items: var(--centro);
+
+}
+
+/* Aqui estaran los estilos de la seccio9n de informes*/
+
+section.informes{
+    width: 100%;
+    margin: 60px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+section.informes article{
+    background-color:var(--blanco);
+    max-width: 48%;
+    height: 130px;
+    flex-basis: 24%;
+    flex: auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+section.informes article:hover{
+    border: 1px solid rgb(46, 161, 255);
+   transform: translate(0px, -5px);
+}
+section.informes article i{
+font-style: initial;
+}
+
+/*Aqui iran los estilos de la seccion y el formulario registrar*/
+
+.registrar{
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+.registrar form{
+    background-color: var(--blanco);
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+.registrar form article{
+    display: flex;
+    gap: 20px;
+}
+.registrar form article div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.registrar form article div label{
+   font-size: 14px;
+}
+.registrar form article div input ,form article select{
+    width: 100%;
+    height: 35px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+}
+.registrar form article div input:focus ,form article select:focus{
+   border: 1px solid var(--verde);
+   box-shadow:var(--shadow-green) ;
+}
+.btns-registrar .btn-registrar{
+    background-color: var(--verde);
+    color: var(--blanco);
+    width: 140px;
+    height: 35px;
+    border:1px solid var(--verde);
+    border-radius: 7px;
+}
+.btns-registrar .btn-registrar:hover{
+    background-color: green;
+}
+.btns-registrar .btn-registrar:active{
+    background-color: var(--verde);
+}
+.btns-registrar .btn-cancelar{
+    background-color: var(--blanco);
+    width: 80px;
+    height: 35px;
+    border:1px solid var(--rojo);
+    border-radius: 7px;
+}  
+.btns-registrar .btn-cancelar:hover{
+    background-color:var(--rojo);
+    color: var(--blanco);
+}
+.btns-registrar .btn-cancelar:active{
+   background-color: rgb(200, 16, 16);
+}
+
+
+/*Aqui estaran los estilos de las listas de las tablas*/
+
+section.listas{
+
+}
+section.listas article{
+    display: flex;
+    justify-content: space-between;
+}
+section.listas article h3{
+   color: var(--color-secundario);
+}
+.listas article div{
+   display: flex;
+   gap: 20px;
+}
+.listas article div select{
+   width: 140px;
+   height: 30px;
+   padding-left: 10px;
+   border-radius: 7px;
+   outline: none;
+   border: 1px solid var(--color-secundario);
+}
+.listas article div select:focus{
+    border: 1px solid var(--verde);
+    box-shadow:var(--shadow-green) ;
+}
+section.listas table{
+    width: 100%;
+    text-align: left;
+}
+section.listas table tr{
+    height: 35px;
+}
+
+
+
+
+@media screen and (max-width:900px){
+    header{
+        width: 100%;
+        padding: 0px 10px;
+        left: 0px;
+        justify-content: space-between;
+
+    }
+    header .informacion{
+        padding: 13px 10px 0px;
+        gap: 10px;
+
+    }
+     aside{
+        display: none;
+    }
+    main{
+        margin-left: auto;
+    }
+   
+}
